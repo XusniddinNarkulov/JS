@@ -1,3 +1,4 @@
+// ex 1
 let vazn = 70;
 let height = 1.83;
 let a = vazn / height ** 2;
@@ -9,9 +10,15 @@ let heightNeo = 1.7;
 let b = vaznNeo / heightNeo ** 2;
 console.log(b);
 
-let me = `I am`;
-let myName = `${me} anderson`;
-console.log(myName);
+let c = a < b;
+console.log(c);
+// ex 1 end
+
+// ex2
+
+// let me = `I am`;
+// let myName = `${me} anderson`;
+// console.log(myName);
 
 // let askAge = prompt("yoshingni kirit: ");
 // if (askAge > 18) {
@@ -22,13 +29,13 @@ console.log(myName);
 //   console.log(`sani yoshing ${askAge} da. San maktab yoshida emassan`);
 // }
 
-console.log("28" * "4" + "8");
-console.log("4" + "4" + 2);
-console.log(Boolean(0));
-console.log(Boolean(""));
-console.log(Boolean(undefined));
-console.log(Boolean(NaN));
-console.log(Boolean(null));
+// console.log("28" * "4" + "8");
+// console.log("4" + "4" + 2);
+// console.log(Boolean(0));
+// console.log(Boolean(""));
+// console.log(Boolean(undefined));
+// console.log(Boolean(NaN));
+// console.log(Boolean(null));
 
 // let age = prompt("yoshingizni kiriting:");
 // let univer = prompt("diploming bormi?(1 yoki 0 kiriting)");
@@ -41,22 +48,23 @@ console.log(Boolean(null));
 // } else {
 //   console.log("uyga bor");
 // }
-let age = Number(prompt("yoshni kirit"));
-switch (age) {
-  case 1:
-    console.log("1da");
-    break;
-  case 2:
-    console.log("2da");
-    break;
-  // case 3:
-  // case 4:
-  //   console.log("3da");
-  //   break;
-  case (3, 4):
-    console.log("3da");
-    break;
-  default:
-    console.log("not Found");
-    break;
-}
+
+// let age = Number(prompt("yoshni kirit"));
+// switch (age) {
+//   case 1:
+//     console.log("1da");
+//     break;
+//   case 2:
+//     console.log("2da");
+//     break;
+//   case 3:
+//   case 4:
+//     console.log("3da");
+//     break;
+//   case (3, 4):
+//     console.log("3da");
+//     break;
+//   default:
+//     console.log("not Found");
+//     break;
+// }
