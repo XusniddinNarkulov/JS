@@ -1,3 +1,4 @@
+"use strict";
 // ex 1
 let vazn = 70;
 let height = 1.83;
@@ -68,3 +69,38 @@ console.log(c);
 //     console.log("not Found");
 //     break;
 // }
+
+// let age = 51;
+// // if (age > 18) {
+// //   console.log("ishga olamiz");
+// // } else if (age < 14) {
+// //   console.log("ishga olmaymiz");
+// // } else {
+// //   console.log("stajirovkaga olamiz");
+// // }
+
+// age > 18
+//   ? console.log("ishga olamiz")
+//   : age < 14
+//   ? console.log("ishga olmaymiz")
+//   : console.log("stajirovkaga olamiz");
+
+// function yoshniHisobla(birthYear, presentYear) {
+//   console.log("Tug'ilgan yilni hisoblash");
+//   return presentYear - birthYear;
+// }
+// console.log(yoshniHisobla(1999, 2022));
+
+// Function declaration
+
+const friends = [22, "Tolib", "Aziz"];
+console.log(friends);
+console.log(friends[1], friends[0]);
+const friend = new Array("22", "tolib");
+console.log(friend);
+console.log(friends.length);
+friends[1] = "Tolibjon";
+console.log(friends);
+
+const books = ["salom", "hello", friends];
+console.log(books);
