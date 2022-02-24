@@ -1,18 +1,18 @@
 "use strict";
 // ex 1
-let vazn = 70;
-let height = 1.83;
-let a = vazn / height ** 2;
-console.log(a);
-console.log(18.5 * height * height);
+// let vazn = 70;
+// let height = 1.83;
+// let a = vazn / height ** 2;
+// console.log(a);
+// console.log(18.5 * height * height);
 
-let vaznNeo = 60;
-let heightNeo = 1.7;
-let b = vaznNeo / heightNeo ** 2;
-console.log(b);
+// let vaznNeo = 60;
+// let heightNeo = 1.7;
+// let b = vaznNeo / heightNeo ** 2;
+// console.log(b);
 
-let c = a < b;
-console.log(c);
+// let c = a < b;
+// console.log(c);
 // ex 1 end
 
 // ex2
@@ -93,14 +93,66 @@ console.log(c);
 
 // Function declaration
 
-const friends = [22, "Tolib", "Aziz"];
-console.log(friends);
-console.log(friends[1], friends[0]);
-const friend = new Array("22", "tolib");
-console.log(friend);
-console.log(friends.length);
-friends[1] = "Tolibjon";
-console.log(friends);
+// const friends = [22, "Tolib", "Aziz"];
+// console.log(friends);
+// console.log(friends[1], friends[0]);
+// const friend = new Array("22", "tolib");
+// console.log(friend);
+// console.log(friends.length);
+// friends[1] = "Tolibjon";
+// console.log(friends);
 
-const books = ["salom", "hello", friends];
-console.log(books);
+// const books = ["salom", "hello", friends];
+// console.log(books);
+
+const book = ["qwerty", "asd", "zxc"];
+// book.push("fgh");
+// book.unshift("Bekzod");
+// console.log(book);
+
+// book.pop();
+// console.log(book);
+
+// book.shift();
+// console.log(book);
+// book.splice(1, 2);
+// console.log(book);
+
+// let about = {
+//   job: "Developer",
+//   age: 24,
+//   university: "TATU",
+// };
+// console.log(about.job, about.age);
+// console.log(about["job"]);
+
+// const aboutMe = {
+//   birth: 1998,
+//   now: 2022,
+
+//   calcAge: function () {
+//     return this.now - this.birth;
+//   },
+// };
+
+// console.log(aboutMe.calcAge());
+
+// for (let i = 1; i < 12; i++) {
+//   console.log(i);
+// }
+// for (let i = 0; i < 100; i += 2) {
+//   console.log(`100 gacha bo'lgan juft sonlar: ${i}`);
+// }
+// for (let i = 1; i < 100; i += 2) {
+//   console.log(`100 gacha bo'lgan toq sonlar: ${i}`);
+// }
+
+let birth = [1996, 1998, 2000, 2002];
+let age = [];
+let calcAge = function () {
+  for (let i = 0; i < birth.length; i++) {
+    age.push(2022 - birth[i]);
+  }
+  return age;
+};
+console.log(calcAge());
