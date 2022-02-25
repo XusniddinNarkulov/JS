@@ -147,12 +147,44 @@ const book = ["qwerty", "asd", "zxc"];
 //   console.log(`100 gacha bo'lgan toq sonlar: ${i}`);
 // }
 
-let birth = [1996, 1998, 2000, 2002];
-let age = [];
-let calcAge = function () {
-  for (let i = 0; i < birth.length; i++) {
-    age.push(2022 - birth[i]);
+// let birth = [1996, 1998, 2000, 2002];
+// let age = [];
+// let calcAge = function () {
+//   for (let i = 0; i < birth.length; i++) {
+//     age.push(2022 - birth[i]);
+//   }
+//   return age;
+// };
+// console.log(calcAge());
+
+// for (let i = birth.length - 1; i >= 0; i--) {
+//   console.log(birth[i]);
+// }
+// let incre = 1;
+// const weekdays = ["dushanba", "seshanba", "chorshanba", "payshanba", "juma"];
+// for (let i = 0; i < weekdays.length; i++) {
+//   console.log(weekdays[i]);
+//   for (let j = 1; j < incre; j++) {
+//     console.log(`${j}-para`);
+//   }
+//   incre++;
+// }
+
+// let soqqa = Math.ceil(-4.6);
+// console.log(soqqa);
+// let soqqa;
+// while (soqqa !== 4) {
+//   console.log(`${soqqa} chiqdi. Yutqazdiz`);
+//   soqqa = Math.round(Math.random() * 10);
+// }
+// console.log(`Siz yutdingiz: ${soqqa}`);
+
+let num = Math.trunc(Math.random() * 10) + 1;
+while (num) {
+  if (num > 5 && num % 2 == 0) {
+    console.log(`${num}`);
+    break;
   }
-  return age;
-};
-console.log(calcAge());
+  console.log(`${num}`);
+  num = Math.trunc(Math.random() * 10) + 1;
+}
