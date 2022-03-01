@@ -105,7 +105,7 @@
 // const books = ["salom", "hello", friends];
 // console.log(books);
 
-const book = ["qwerty", "asd", "zxc"];
+// const book = ["qwerty", "asd", "zxc"];
 // book.push("fgh");
 // book.unshift("Bekzod");
 // console.log(book);
@@ -147,12 +147,29 @@ const book = ["qwerty", "asd", "zxc"];
 //   console.log(`100 gacha bo'lgan toq sonlar: ${i}`);
 // }
 
-let birth = [1996, 1998, 2000, 2002];
-let age = [];
-let calcAge = function () {
-  for (let i = 0; i < birth.length; i++) {
-    age.push(2022 - birth[i]);
+// let birth = [1996, 1998, 2000, 2002];
+// let age = [];
+// let calcAge = function () {
+//   for (let i = 0; i < birth.length; i++) {
+//     age.push(2022 - birth[i]);
+//   }
+//   return age;
+// };
+// console.log(calcAge());
+
+function myFunction(a, b) {
+  a = a.split("%");
+  b = b.split("%");
+  a = a.join("");
+  b = b.join("");
+  b = b.split("");
+  let c = [];
+  for (let i = b.length - 1; i >= 0; i--) {
+    c.push(b[i]);
   }
-  return age;
-};
-console.log(calcAge());
+  c = c.join("");
+  return `${a[0].toUpperCase()}${a.slice(1)}${c}`;
+}
+console.log(myFunction("java", "tpi%rcs"));
+console.log(myFunction("c%ountry", "edis"));
+console.log(myFunction("down", "nw%ot"));
