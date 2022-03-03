@@ -189,48 +189,48 @@ const book = ["qwerty", "asd", "zxc"];
 //   num = Math.trunc(Math.random() * 10) + 1;
 // }
 
-let str = "Konsol";
-// console.log(str);
-// console.log(str.indexOf(""));
-console.log(str.lastIndexOf());
-console.log(str.startsWith("Ko"));
-console.log(str.endsWith("ol"));
-console.log(str.slice(1, 4));
-console.log(str.slice(-2));
-console.log(str.substring(1, 5));
-console.log(str.substring(4, 2));
-console.log(str.substr(1, 3));
-console.log(str.replace("o", "aa"));
-console.log(str.toUpperCase());
-console.log(str.toLowerCase());
-let str1 = "hel";
-let str2 = "lo";
-// // let = full;
-// // full = full.concat(str1);
-// // full = full.concat(str2);
-// // console.log(full);
-str1 = str1.concat(str2, "John");
-console.log(str1);
-// // trim 2ta tomondan probellarni olib tashlaydi
-console.log(str.trim());
-console.log(str.trimStart());
-console.log(str.charAt(3));
-console.log(str.length);
+// let str = "Konsol";
+// // console.log(str);
+// // console.log(str.indexOf(""));
+// console.log(str.lastIndexOf());
+// console.log(str.startsWith("Ko"));
+// console.log(str.endsWith("ol"));
+// console.log(str.slice(1, 4));
+// console.log(str.slice(-2));
+// console.log(str.substring(1, 5));
+// console.log(str.substring(4, 2));
+// console.log(str.substr(1, 3));
+// console.log(str.replace("o", "aa"));
+// console.log(str.toUpperCase());
+// console.log(str.toLowerCase());
+// let str1 = "hel";
+// let str2 = "lo";
+// // // let = full;
+// // // full = full.concat(str1);
+// // // full = full.concat(str2);
+// // // console.log(full);
+// str1 = str1.concat(str2, "John");
+// console.log(str1);
+// // // trim 2ta tomondan probellarni olib tashlaydi
+// console.log(str.trim());
+// console.log(str.trimStart());
+// console.log(str.charAt(3));
+// console.log(str.length);
 
-str = str.toUpperCase();
-let arr = [];
-arr = str.split("");
-console.log(arr);
-let arr1 = [];
-for (let i = 0; i < arr.length; i++) {
-  arr1.push(arr[i]);
-  if (arr[i] === "L") {
-    arr1.push("L");
-  }
-}
+// str = str.toUpperCase();
+// let arr = [];
+// arr = str.split("");
+// console.log(arr);
+// let arr1 = [];
+// for (let i = 0; i < arr.length; i++) {
+//   arr1.push(arr[i]);
+//   if (arr[i] === "L") {
+//     arr1.push("L");
+//   }
+// }
 
-console.log(arr1);
-console.log(arr1.join("+"));
+// console.log(arr1);
+// console.log(arr1.join("+"));
 
-let sp = "Toshkent";
+let sp = "Salom Toshkent ";
 console.log(sp.split("o"));

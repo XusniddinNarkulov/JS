@@ -1,0 +1,14 @@
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+}
+.box {
+  background-color: blueviolet;
+  text-align: center;
+  color: white;
+}
+.box h1 {
+  padding: 20%;
+}
