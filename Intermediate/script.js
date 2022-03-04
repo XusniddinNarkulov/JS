@@ -76,22 +76,22 @@
 // }
 
 //
-let kafe = {
-  cafeName: "MagicCafe",
-  taomlar: ["plov", "shurva", "shashlik"],
-  sweets: ["icecream", "cake", "chocolate"],
-  ichimliklar: ["coffee", "tea", "energetics"],
-  workingTime: {
-    dush: { open: "8:00", close: "22:00" },
-    shanba: { open: "6:00", close: "00:00" },
-  },
-  locationCafe: "Tashkent, Yunusobod, TATU",
-  order: function (taom, ichimlik) {
-    console.log(
-      `Buyurtmangiz: ${this.taomlar[taom]} va ${this.ichimliklar[ichimlik]}`
-    );
-  },
-};
+// let kafe = {
+//   cafeName: "MagicCafe",
+//   taomlar: ["plov", "shurva", "shashlik"],
+//   sweets: ["icecream", "cake", "chocolate"],
+//   ichimliklar: ["coffee", "tea", "energetics"],
+//   workingTime: {
+//     dush: { open: "8:00", close: "22:00" },
+//     shanba: { open: "6:00", close: "00:00" },
+//   },
+//   locationCafe: "Tashkent, Yunusobod, TATU",
+//   order: function (taom, ichimlik) {
+//     console.log(
+//       `Buyurtmangiz: ${this.taomlar[taom]} va ${this.ichimliklar[ichimlik]}`
+//     );
+//   },
+// };
 
 // let {
 //   cafeName: nomi,
@@ -111,17 +111,17 @@ let kafe = {
 // console.log(ochilish);
 // console.log(yopilish);
 
-const c = {
-  a: 7,
-  b: 8,
-};
+// const c = {
+//   a: 7,
+//   b: 8,
+// };
 
-let y = function (obj) {
-  const { a, b } = obj;
-  return a + b;
-};
+// let y = function (obj) {
+//   const { a, b } = obj;
+//   return a + b;
+// };
 
-console.log(y(c));
+// console.log(y(c));
 
 // // spread operator
 // let arrIch = [...kafe.ichimliklar, "fanta"];
@@ -136,4 +136,85 @@ console.log(y(c));
 // const arrUz = [...str];
 // console.log(arrUz);
 
+// 4 rest pattern an Parameters
+// const [, x, ...arr1] = [1, 2, 3, 4, 5, 6];
+// console.log(x);
+// console.log(arr1);
+
 //
+let kafe = {
+  odam: 0,
+  cafeName: "MagicCafe",
+  taomlar: ["plov", "shurva", "shashlik"],
+  sweets: ["icecream", "cake", "chocolate"],
+  ichimliklar: ["coffee", "tea", "energetics"],
+  workingTime: {
+    dush: { open: "8:00", close: "22:00" },
+    shanba: { open: "6:00", close: "00:00" },
+  },
+  locationCafe: "Tashkent, Yunusobod, TATU",
+  order: function (taom, ichimlik) {
+    console.log(
+      `Buyurtmangiz: ${this.taomlar[taom]} va ${this.ichimliklar[ichimlik]}`
+    );
+  },
+};
+kafe.workingTime.dush?.open ? console.log("bor") : console.log("yoq");
+//
+// for (let [a, b] of Object.entries(kafe)) {
+//   console.log(a, `->`, b);
+// }
+let arr = Object.entries(kafe);
+console.log(arr);
+// let mix = [...kafe.taomlar, ...kafe.ichimliklar];
+// for (let el of mix.entries()) {
+//   console.log(el[0] + 1, el[1]);
+// }
+// for (let [a, b] of kafe.taomlar.entries()) {
+//   console.log(a + 1, b);
+// }
+
+// const x = [...kafe.taomlar, ...kafe.ichimliklar];
+
+// const { workingTime } = kafe;
+// console.log(workingTime);
+// const { yakshanba, ...haftaKunlari } = workingTime;
+// console.log(yakshanba);
+// console.log(haftaKunlari);
+
+//
+// function ayirish(...raqamlar) {
+//   let sum = 0;
+//   for (let i = 0; i < raqamlar.length; i++) {
+//     sum = sum - raqamlar[i];
+//   }
+//   console.log(sum);
+// }
+// ayirish(1, 2, 3, 4, 5, 6);
+
+// // ||
+// console.log(0 || "sa" || (23 && null));
+// // &&
+// console.log(1 && "salom" && 0);
+// // ??
+// console.log(kafe.odam ?? "bunaqa key yo'q");
+
+// for-of loop
+// let a = [1, 2, 3, 4, 5, 6];
+// let sum = 0;
+// // for (let i = 0; i < a.length; i++) {
+// //   console.log(a[i]);
+// //   sum = sum + a[i];
+// // }
+// // console.log(sum);
+
+// for (let el of a) {
+//   console.log(el);
+//   sum = sum + el;
+// }
+// console.log(sum);
+
+// let b = "salom";
+// for (let i of b) {
+//   console.log(i);
+// }
