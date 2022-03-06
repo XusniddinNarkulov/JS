@@ -142,30 +142,30 @@
 // console.log(arr1);
 
 //
-let kafe = {
-  odam: 0,
-  cafeName: "MagicCafe",
-  taomlar: ["plov", "shurva", "shashlik"],
-  sweets: ["icecream", "cake", "chocolate"],
-  ichimliklar: ["coffee", "tea", "energetics"],
-  workingTime: {
-    dush: { open: "8:00", close: "22:00" },
-    shanba: { open: "6:00", close: "00:00" },
-  },
-  locationCafe: "Tashkent, Yunusobod, TATU",
-  order: function (taom, ichimlik) {
-    console.log(
-      `Buyurtmangiz: ${this.taomlar[taom]} va ${this.ichimliklar[ichimlik]}`
-    );
-  },
-};
-kafe.workingTime.dush?.open ? console.log("bor") : console.log("yoq");
-//
-// for (let [a, b] of Object.entries(kafe)) {
-//   console.log(a, `->`, b);
-// }
-let arr = Object.entries(kafe);
-console.log(arr);
+// let kafe = {
+//   odam: 0,
+//   cafeName: "MagicCafe",
+//   taomlar: ["plov", "shurva", "shashlik"],
+//   sweets: ["icecream", "cake", "chocolate"],
+//   ichimliklar: ["coffee", "tea", "energetics"],
+//   workingTime: {
+//     dush: { open: "8:00", close: "22:00" },
+//     shanba: { open: "6:00", close: "00:00" },
+//   },
+//   locationCafe: "Tashkent, Yunusobod, TATU",
+//   order: function (taom, ichimlik) {
+//     console.log(
+//       `Buyurtmangiz: ${this.taomlar[taom]} va ${this.ichimliklar[ichimlik]}`
+//     );
+//   },
+// };
+// kafe.workingTime.dush?.open ? console.log("bor") : console.log("yoq");
+// //
+// // for (let [a, b] of Object.entries(kafe)) {
+// //   console.log(a, `->`, b);
+// // }
+// let arr = Object.entries(kafe);
+// console.log(arr);
 // let mix = [...kafe.taomlar, ...kafe.ichimliklar];
 // for (let el of mix.entries()) {
 //   console.log(el[0] + 1, el[1]);
@@ -218,3 +218,125 @@ console.log(arr);
 // for (let i of b) {
 //   console.log(i);
 // }
+
+// const [k, s] = input.split(' ').map(Number)
+// function yech(k,s){
+
+//   let [x,y,z];
+//   0 <= [x,y,z];
+//   k >= [x,y,z];
+//   s = x + y +z;
+//   };
+
+//   yech(input);
+
+// Sets
+// let setsArr = new Set([1, 1, 2, 2, 3, 3]);
+// console.log(setsArr);
+// let str = new Set("hello hello");
+// console.log(str);
+// console.log(str.size);
+// console.log(str.has("m")); //false
+// console.log(str.add("qi"));
+// str.delete("qi");
+// console.log(str);
+// str.clear();
+// console.log(str);
+
+// let ishchilarOffice = [
+//   "frontend",
+//   "frontend",
+//   "frontend",
+//   "frontend",
+//   "backend",
+//   "backend",
+//   "mobile",
+//   "mobile",
+//   "counter",
+// ];
+// console.log(ishchilarOffice.length);
+// const newSet = new Set(ishchilarOffice);
+// console.log(newSet);
+
+// Maps
+
+// const obj = {
+//   namee: "Umid",
+//   age: 20,
+//   job: "dev",
+// };
+
+// const me = new Map();
+// me.set("namee", "Umid");
+// me.set(1, 20);
+// me.set(true, "yutding");
+// console.log(me);
+// console.log(me.get(true));
+// console.log(me.get(1));
+// console.log(me.get("namee"));
+// console.log(me.has("namee"));
+// me.delete(1);
+// console.log(me);
+// console.log(me.size);
+
+// const rest = new Map([
+//   ["namee", "Umid"],
+//   ["age", 20],
+//   ["job", "dev"],
+// ]);
+// console.log(rest);
+// console.log(rest.get("job"));
+
+// let arr = [1, 2];
+// rest.set(arr, "Arrayni qo'shdim");
+// console.log(rest.get(arr));
+// console.log(rest);
+
+// let dam = ["shanba", "yakshanba"];
+// let ishKuni = ["dushanba", "seshanba", "chorshanba", "payshanba", "juma"];
+// const office = new Map([
+//   ["name", "magicSoft"],
+//   ["open", 9],
+//   ["close", 18],
+//   [true, "Office ochiq"],
+//   [false, "Office yopiq"],
+// ]);
+// let sorov = prompt("Kunni kiriting:");
+// office.set("damOlish", dam);
+// office.set("ishKuni", ishKuni);
+// office.get("ishKuni").includes(sorov)
+//   ? console.log("bu kun Ish kuni")
+//   : console.log("bu kun Dam olish kuni");
+
+// const savol = new Map([
+//   ["savol", "O'zbekiston poytaxti"],
+//   [1, "Toshkent"],
+//   [2, "Samarqand"],
+//   [3, "Xorazm"],
+//   ["javob", 1],
+//   [true, "topding"],
+//   [false, "xato"],
+// ]);
+
+// const kirit = Number(prompt(`Javob raqamini kirit`));
+// console.log(savol.get("Savol"));
+// for (let [key, val] of savol) {
+//   if (typeof key == "number") {
+//     console.log(`${key} ->Javob: ${val}`);
+//   }
+// }
+
+let obj = {
+  ism: "neo",
+  job: "developer",
+  age: "23",
+};
+
+let arr = [...Object.values(obj)];
+console.log(arr);
+
+let arr0 = new Map(Object.entries(obj));
+console.log(arr0);
+
+const arr1 = [...arr0.keys()];
+console.log(arr1);
