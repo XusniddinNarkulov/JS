@@ -326,17 +326,114 @@
 //   }
 // }
 
-let obj = {
-  ism: "neo",
-  job: "developer",
-  age: "23",
+// let obj = {
+//   ism: "neo",
+//   job: "developer",
+//   age: "23",
+// };
+
+// let arr = [...Object.values(obj)];
+// console.log(arr);
+
+// let arr0 = new Map(Object.entries(obj));
+// console.log(arr0);
+
+// const arr1 = [...arr0.keys()];
+// console.log(arr1);
+
+// //
+// let str = "salom toshkent, xayr buxoro";
+// console.log(str.split(" "));
+// let arr = str.split(" ");
+// for (let el of arr) {
+//   console.log(el[0].toUpperCase() + el.slice(1));
+// }
+
+// let namee = "Neo \n";
+// namee.padStart("!", 3);
+// console.log(
+//   namee.padStart(namee.length + 4, "+").padEnd(namee.length + 7, "!")
+// );
+// console.log(namee.repeat(5));
+
+//function: default parameters
+// let arr = [
+//   {
+//     name: "S20",
+//     price: 100,
+//     color: "black",
+//   },
+//   { name: "S10", price: 300, color: "black" },
+//   { name: "S21", price: 200, color: "black" },
+//   { name: "S22", price: 400, color: "black" },
+// ];
+// let market = function (cat = "Samsung", price = 400) {
+//   switch (cat) {
+//     case "Samsung":
+//       for (let i = 0; i < arr.length; i++) {
+//         if (arr[i].price <= price) {
+//           console.log(
+//             `Siz ${arr[i].name} telefonini ${arr[i].price}$ ga ${arr[i].color} rangini olishingiz mumkin
+//           `
+//           );
+//         }
+//       }
+//   }
+// };
+
+// market(undefined, 340);
+
+////primitive va reference tiplarni funksiyaga argument sifatida berish
+// let me = {
+//   name: "Neo",
+//   job: "Dev",
+// };
+// let age = 20;
+// let myFunc = function (age, obj) {
+//   age = 12;
+//   obj.name = "Sardor";
+//   console.log(age, obj);
+// };
+
+// myFunc(age, me);
+// console.log(me, age);
+
+//
+// let lib = "Kutubxona";
+// let person = {
+//   id: 123123,
+//   ism: "Neo",
+// };
+// function myFunc(id, ism) {
+//   id = Number(prompt(`id raqamingizni kiriting`));
+//   ism = person.ism;
+//   if (id === person.id) {
+//     console.log(`${lib}ga xush kelibsiz`);
+//   } else {
+//     console.log(`xato kiritdingiz`);
+//   }
+// }
+// myFunc(person);
+
+// primitive
+// const age = 20;
+// let myFunc = function (age) {
+//   age = 30;
+//   console.log(age);
+// };
+// myFunc(age);
+// console.log(age);
+
+// reference
+const umid = {
+  name: "Neo",
+  age: 30,
 };
-
-let arr = [...Object.values(obj)];
-console.log(arr);
-
-let arr0 = new Map(Object.entries(obj));
-console.log(arr0);
-
-const arr1 = [...arr0.keys()];
-console.log(arr1);
+let myFunk = function (obj) {
+  obj.name = "Ja'far";
+  obj.age = 1;
+  console.log(obj);
+};
+console.log(umid);
+myFunk(umid);
+console.log(umid);
