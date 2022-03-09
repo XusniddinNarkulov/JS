@@ -425,15 +425,126 @@
 // console.log(age);
 
 // reference
-const umid = {
-  name: "Neo",
-  age: 30,
+// const umid = {
+//   name: "Neo",
+//   age: 30,
+// };
+// let myFunk = function (obj) {
+//   obj.name = "Ja'far";
+//   obj.age = 1;
+//   console.log(obj);
+// };
+// console.log(umid);
+// myFunk(umid);
+// console.log(umid);
+
+// First-class and Higher order functions
+//High-order
+// function func(a) {
+//   return function (b) {
+//     return a + b;
+//   };
+// }
+// let ich = func(8);
+// console.log(ich(5));
+
+// //High-order
+// function add(a, b) {
+//   return a + b;
+// }
+// function calc(c, math) {
+//   return c + math;
+// }
+// console.log(calc(8, add(5, 6)));
+
+// //high-order
+// function count() {
+//   let counter = 0;
+//   return function () {
+//     console.log(counter++);
+//   };
+// }
+// let co = count();
+// co(); //0
+// co(); //1
+// co(); //2
+// co(); //3
+
+//
+// let str = prompt("kiriting");
+// function kattaHarf(suz) {
+//   console.log(suz.toUppercase());
+// }
+// function kichikHarf(suz) {
+//   console.log(suz.toLowercase());
+// }
+// function birinchiHarf(suz) {
+//   let arr = suz.split(" ");
+//   for (let i = 0; i < arr.length; i++) {
+//     arr[i] = arr[i][0].toUppercase() + arr[i].substr(1).toLowercase();
+//   }
+//   let str1 = arr.join("");
+//   let str2 = str1;
+//   str2 = str2.replace(`${str2[0]}`, `${str2[0].toLowercase()}`);
+//   console.log(str2);
+// }
+
+// let transform = function (a, b) {
+//   b(a);
+// };
+
+// transform(str, birinchiHarf);
+
+//Functions Returning Functions
+// function a(x) {
+//   console.log(x);
+//   return function (bir) {
+//     console.log(bir);
+//     return function (ikki) {
+//       console.log(ikki);
+//     };
+//   };
+// }
+// let b = a(1); //1
+// let c = b(4); //4
+// let d = c(5); //5
+// let e = d(8); //error d is not a function
+
+//Call and apply
+// function a(x, y) {
+//   console.log(x + y);
+// }
+// const obj = {
+//   name: "neo",
+//   age: 22,
+// };
+// let arr = [10, 20];
+// a.call(obj, 20, 30); //50
+// a.call(obj, arr); //10,20undefined
+// a.apply(obj, arr); //30
+// a.call(obj, ...arr); //30
+
+// //bind method
+// let me = {
+//   name: "Jack",
+//   order(model, year, color) {
+//     console.log(model, year, color);
+//   },
+// };
+
+// let you = {
+//   name: "Neo",
+// };
+// let newOrder = me.order;
+// let youOrder = newOrder.bind(you, "s20");
+// youOrder(2020, "black"); //s20, 2020, black
+
+//
+let magicPhone = {};
+magicPhone.phones = 0;
+magicPhone.buy = function () {
+  console.log(++this.phones);
 };
-let myFunk = function (obj) {
-  obj.name = "Ja'far";
-  obj.age = 1;
-  console.log(obj);
-};
-console.log(umid);
-myFunk(umid);
-console.log(umid);
+// console.log(magicPhone.phones);
+let func = magicPhone.buy.bind(magicPhone);
+document.querySelector(".box").addEventListener("click", func);
