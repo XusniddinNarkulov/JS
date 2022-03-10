@@ -540,11 +540,127 @@
 // youOrder(2020, "black"); //s20, 2020, black
 
 //
-let magicPhone = {};
-magicPhone.phones = 0;
-magicPhone.buy = function () {
-  console.log(++this.phones);
-};
-// console.log(magicPhone.phones);
-let func = magicPhone.buy.bind(magicPhone);
-document.querySelector(".box").addEventListener("click", func);
+// let magicPhone = {};
+// magicPhone.phones = 0;
+// magicPhone.buy = function () {
+//   console.log(++this.phones);
+// };
+// // console.log(magicPhone.phones);
+// let func = magicPhone.buy.bind(magicPhone);
+// document.querySelector(".box").addEventListener("click", func);
+
+// IIFE
+// (function () {
+//   console.log("hello");
+// })();
+
+//closure
+// const func = function () {
+//   let sana = 0;
+//   return function () {
+//     sana++;
+//     console.log(sana);
+//   };
+// };
+// let b = func();
+// b();
+// b();
+// b();
+// //
+// let sum = 0;
+// for (let i = 0; i < 10; i++) {
+//   sum = sum + i;
+//   console.log(sum);
+// }
+//
+// function a() {
+//   let x = 4;
+//   return function () {
+//     console.log(--x);
+//   };
+// }
+// let b = a();
+// b();
+// b();
+// b();
+
+// simple array methods
+// let arr = ["U", "M", "I", "D"];
+// console.log(arr.slice(0, -1));
+// console.log(arr);
+// console.log(arr.splice(2, 4));
+// console.log(arr);
+// let arr1 = [1, 2, 3, 4, 5];
+// console.log(arr1.reverse());
+// console.log(arr1);
+// let arr2 = [1, 2, 3, 4, 5];
+// console.log(arr1.concat(arr2, arr));
+// console.log(arr2.join("-"));
+// console.log(arr2[1]);
+// console.log(arr2.at(-1));
+// console.log(arr2[arr2.length - 2]);
+// let a = "Neo";
+// console.log(a.at(2));
+
+//Looping arrays:forEach()
+// let arr = [1, 2, 3, 4, 5, "neo"];
+// arr.forEach(function (val, key, ar) {
+//   console.log(
+//     val,
+//     key,
+//     ar.forEach(function (x, y, z) {
+//       console.log(x, y, z);
+//     })
+//   );
+// });
+
+//
+// let umidClick = {
+//   name: "Umid Rustamov",
+//   balance: 1000,
+//   transaction: [],
+//   pin: 1111,
+// };
+
+// let mironshohClick = {
+//   name: "Mironshoh",
+//   balance: 2000,
+//   transaction: [],
+//   pin: 2222,
+// };
+// let arr = [umidClick, mironshohClick];
+// let utkazma = function (arr) {
+//   let pinCode = Number(prompt(`parolni kirit`));
+//   for (let element of arr) {
+//     if (pinCode === element.pin) {
+//       console.log(`sizning balansingiz: ${element.balance}`);
+//       console.log(`account: ${element.name}`);
+//       // let pul = Number(prompt(`qancha pul jo'natasiz`));
+//     } else {
+//       console.log("parol xato");
+//     }
+//   }
+// };
+// utkazma(arr);
+
+//data transformations: map, filter, reduce
+//map
+let arr = [1, 2, 3, 4, 5];
+let x = arr.map(function (val, key) {
+  return val * 10;
+});
+console.log(x);
+
+let dollar = [100, 200, 400, 30, 333];
+let dollarToUZS = 10900;
+let uzs = dollar.map(function (val, key) {
+  return val * dollarToUZS;
+});
+console.log(uzs);
+let filter200 = dollar.filter(function (val) {
+  return val > 200;
+});
+console.log(filter200);
+let reduce1 = dollar.reduce(function (val) {
+  return;
+});
