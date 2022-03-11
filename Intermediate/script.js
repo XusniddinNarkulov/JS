@@ -645,22 +645,56 @@
 
 //data transformations: map, filter, reduce
 //map
-let arr = [1, 2, 3, 4, 5];
-let x = arr.map(function (val, key) {
-  return val * 10;
-});
-console.log(x);
+// let arr = [1, 2, 3, 4, 5];
+// let x = arr.map(function (val, key) {
+//   return val * 10;
+// });
+// console.log(x);
 
-let dollar = [100, 200, 400, 30, 333];
-let dollarToUZS = 10900;
-let uzs = dollar.map(function (val, key) {
-  return val * dollarToUZS;
-});
-console.log(uzs);
-let filter200 = dollar.filter(function (val) {
-  return val > 200;
-});
-console.log(filter200);
-let reduce1 = dollar.reduce(function (val) {
-  return;
-});
+// let dollar = [100, 200, 400, 30, 333];
+// let dollarToUZS = 10900;
+// let uzs = dollar.map(function (val, key) {
+//   return val * dollarToUZS;
+// });
+// console.log(uzs);
+// let filter200 = dollar.filter(function (val) {
+//   return val > 200;
+// });
+// console.log(filter200);
+// let reduce1 = dollar.reduce(function (sum, val, key) {
+//   return sum + val;
+// }, 0);
+// console.log(reduce1);
+
+// let mx = function () {
+//   for (let i = 0; i < dollar.length; i++) {
+//     let x = dollar[0];
+//     if (x < dollar[i]) {
+//       return x;
+//     } else {
+//       return dollar[i];
+//     }
+//   }
+// };
+// console.log(mx(dollar));
+// let sum = dollar.reduce(function (max, val, key) {
+//   if (max < val) {
+//     return val;
+//   } else {
+//     return max;
+//   }
+// }, dollar[0]);
+// console.log(sum);
+
+//find method
+// const accounts = [account1, account2, account3, account4];
+
+// let x = accounts.find(function (val) {
+//   return val.username === "js";
+// });
+// console.log(x);
+// console.log(
+//   accounts.find(function (val) {
+//     return val.username === "ss";
+//   })
+// );
