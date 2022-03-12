@@ -698,3 +698,55 @@
 //     return val.username === "ss";
 //   })
 // );
+
+// chaining methods
+// let arr = [1, 2, 3, 4];
+// let sum = arr
+//   .filter((val, key) => val > 2)
+//   .map((val) => val * 3)
+//   .reduce(function (su, val) {
+//     return su + 10 + val;
+//   }, 0);
+// console.log(sum);
+// //
+// console.log(arr.findIndex((val) => val === 3));
+// console.log(arr.some((val) => val > 1)); //true. Bu metod ||(or) operatoriga o'xshab ketadi
+// console.log(arr.every((val) => val > 1)); //false. Bu metod &&(and) operatoriga o'xshab ketadi
+// console.log(arr.every((val) => val > 0)); //true
+// //
+// let arr1 = [[4, 5, [6, 7]], 8, 9];
+
+// console.log(arr1.flat(0)); //(3) [array(3),8,9]
+// console.log(arr1.flat(1)); //(5) [4,5,array(2),8,9]
+// console.log(arr1.flat(2)); //(6) [4,5,6,7,8,9]
+
+// let arr2 = [arr, arr1];
+// console.log(
+//   arr2.map(function (val) {
+//     return val.flat(10);
+//   })
+// ); //(2) [array(4), array(6)]
+
+// console.log(
+//   arr2.flatMap(function (val) {
+//     return val;
+//   })
+// ); //faqat 1ta qavsni ochadi
+
+// //
+// let x = ["q", "w", "e", "r", "t", "y"];
+// console.log(x.sort());
+
+const s = "fhkasfmagsadidadsacsadjsodaf";
+let mag = "magicsoft";
+let x = [...s];
+function check(s) {
+  for (let el of mag) {
+    if (x.includes(el)) {
+      console.log(`topdim`);
+    } else {
+      console.log(`topolmadim`);
+    }
+  }
+}
+check(s);
