@@ -733,20 +733,64 @@
 //   })
 // ); //faqat 1ta qavsni ochadi
 
-// //
-// let x = ["q", "w", "e", "r", "t", "y"];
-// console.log(x.sort());
+// contest 1
+// const s = "fhkasfmagsadidadsacsadjsodaf";
+// let mag = "magicsoft";
+// let x = [...s];
+// function check(s) {
+//   for (let el of mag) {
+//     if (x.includes(el)) {
+//       console.log(`topdim`);
+//     } else {
+//       console.log(`topolmadim`);
+//     }
+//   }
+// }
+// check(s);
 
-const s = "fhkasfmagsadidadsacsadjsodaf";
-let mag = "magicsoft";
-let x = [...s];
-function check(s) {
-  for (let el of mag) {
-    if (x.includes(el)) {
-      console.log(`topdim`);
-    } else {
-      console.log(`topolmadim`);
-    }
+// // Sort
+let x = [
+  "qs",
+  "qe",
+  "Wd",
+  "Wa",
+  "eee",
+  "ee",
+  "r",
+  "t",
+  "y",
+  22,
+  2,
+  35,
+  11,
+  111,
+  -2,
+  0,
+];
+console.log(x.sort());
+let str = "hel";
+console.log(str.charCodeAt(2));
+console.log(String.fromCharCode(33)); //utf da 50-nomerda turgan symbolni olib keladi
+//raqamlar uchun
+x.sort(function (a, b) {
+  if (a > b) {
+    return 1;
+  } else {
+    return -1;
   }
-}
-check(s);
+});
+console.log(x);
+// let sortt = function (a, b) {
+//   if (a > b) {
+//     return 1;
+//   } else if (a < b) {
+//     return -1;
+//   } else if ((a = b)) {
+//     return 0;
+//   }
+// };
+
+// let sortirovka = function (arr) {
+//   for (let i = 0; i < arr.length; i++) {}
+// };
+// console.log(sortirovka(x));
