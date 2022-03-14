@@ -749,37 +749,37 @@
 // check(s);
 
 // // Sort
-let x = [
-  "qs",
-  "qe",
-  "Wd",
-  "Wa",
-  "eee",
-  "ee",
-  "r",
-  "t",
-  "y",
-  22,
-  2,
-  35,
-  11,
-  111,
-  -2,
-  0,
-];
-console.log(x.sort());
-let str = "hel";
-console.log(str.charCodeAt(2));
-console.log(String.fromCharCode(33)); //utf da 50-nomerda turgan symbolni olib keladi
-//raqamlar uchun
-x.sort(function (a, b) {
-  if (a > b) {
-    return 1;
-  } else {
-    return -1;
-  }
-});
-console.log(x);
+// let x = [
+//   "qs",
+//   "qe",
+//   "Wd",
+//   "Wa",
+//   "eee",
+//   "ee",
+//   "r",
+//   "t",
+//   "y",
+//   22,
+//   2,
+//   35,
+//   11,
+//   111,
+//   -2,
+//   0,
+// ];
+// console.log(x.sort());
+// let str = "hel";
+// console.log(str.charCodeAt(2));
+// console.log(String.fromCharCode(33)); //utf da 50-nomerda turgan symbolni olib keladi
+// //raqamlar uchun
+// x.sort(function (a, b) {
+//   if (a > b) {
+//     return 1;
+//   } else {
+//     return -1;
+//   }
+// });
+// console.log(x);
 // let sortt = function (a, b) {
 //   if (a > b) {
 //     return 1;
@@ -794,3 +794,36 @@ console.log(x);
 //   for (let i = 0; i < arr.length; i++) {}
 // };
 // console.log(sortirovka(x));
+
+//fill and from methods
+// let arr = [1, 2, 3, 4, 5];
+// console.log(arr.fill(2, arr.length, 10));
+// let x = new Array(10);
+// console.log(x);
+// console.log(x.fill(33, 0, 5));
+// console.log(arr.fill(11, -2)); //[1,2,3,11,11]
+// let y = new Array(23, 2323, 2323);
+// console.log(y);
+
+// let q = new Array(20);
+
+// let a = Array.from({ length: 20 }, function (val, key) {
+//   return key + 1;
+// });
+// console.log(a);
+
+// let juft = Array.from({ length: 50 }, function (val, key) {
+//   return key * 2 + 1;
+// });
+// console.log(juft);
+
+// let arr1 = Array.from(arr, (val) => val * 10);
+// console.log(arr1);
+
+// numbers
+let x = "24";
+console.log(Number(x)); //24
+console.log(+x + 2); //26
+console.log(x + 2); //242
+console.log(x);
+let y = 22;
