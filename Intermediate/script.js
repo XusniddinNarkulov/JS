@@ -820,10 +820,141 @@
 // let arr1 = Array.from(arr, (val) => val * 10);
 // console.log(arr1);
 
-// numbers
-let x = "24";
-console.log(Number(x)); //24
-console.log(+x + 2); //26
-console.log(x + 2); //242
-console.log(x);
-let y = 22;
+// numbers NUMBERS
+// let x = "24";
+// console.log(Number(x)); //24
+// console.log(+x + 2); //26
+// console.log(x + 2); //242
+// console.log(x);
+// let y = "22";
+// console.log(y + 2);
+
+// let a = 2.288235;
+// console.log(a.toFixed()); //2
+// console.log(a.toFixed(1)); //2.3
+// console.log(a.toFixed(2)); //2.29
+
+// console.log(Number.parseInt("23.7 px, 4")); //23 nuqtadan keyingi sonlarni olmaydi
+// console.log(Number.parseFloat("323.23 23 px 23")); //323.23 nuqtadan keyingi sonlarni oladi
+// console.log(Number.parseFloat("px 24")); //NaN (not a number)
+
+// console.log(Number.isNaN(Number.parseFloat("px 24"))); //true //isNan faqat NaN qiymatga true qaytaradi//
+// console.log(Number.isNaN(+"23px")); //true
+// console.log(Number.isNaN("sadad")); //false
+// console.log(Number.isNaN(23)); //false
+
+// console.log(Number.isFinite("23")); //false //raqamligini tekshirish
+// console.log(Number.isFinite(23)); //true
+
+// console.log(Number.isInteger(23)); //true //kasr yoki butun sonligini tekshirish
+// console.log(Number.isInteger(23.2)); //false
+// console.log(Number.isInteger("24")); //false
+
+// console.log(50 / 0); //Infinity
+
+// let a = Math.max(7, 13, 23, 1, 233, 325);
+// console.log(a);
+// let b = [23, 1231, 1243, 234];
+// console.log(Math.min(...b));
+// console.log(Math.max(23, 124, 134, 134, 57));
+
+// let i = Math.round(Math.random() * 10);
+// console.log(i);
+
+// function rando(a, b) {
+//   let c = Math.round(Math.random() * (b - a) + a);
+//   return c;
+// }
+// console.log(rando(-5, 5));
+
+// console.log(Math.sqrt(9)); //3
+// console.log(9 ** (1 / 2)); //3
+// console.log(343 ** (1 / 3)); //7
+// console.log(256 ** (1 / 8)); //2
+
+// let arr = [];
+// console.log(arr);
+
+// let obj = {
+//   1: "bir",
+//   2: "ikki",
+//   3: "uch",
+//   4: "to'rt",
+//   5: "besh",
+//   6: "olti",
+//   7: "yetti",
+//   8: "sakkiz",
+//   9: "to'qqiz",
+//   10: "o'n",
+// };
+// let obj = {
+//   bir: "1",
+//   ikki: "2",
+//   uch: "3",
+//   tort: "4",
+//   besh: "5",
+//   olti: "6",
+//   yetti: "7",
+//   sakkiz: "8",
+//   toqqiz: "9",
+// };
+// console.log(obj);
+// let nMap = new Map(Object.entries(obj));
+// console.log(nMap);
+// let arr = [];
+// function numToWord(a) {
+//   let arr1 = [];
+//   arr1 = [...String(a)];
+//   for (let el of arr1) {
+//     if (el == nMap.values) {
+//       arr.push(nMap.keys);
+//     }
+//   }
+//   return arr;
+// }
+// console.log(numToWord(14134));
+// console.log(arr);
+// console.log(...String(233));
+// // console.log(arr);
+// let y = [...String(123)];
+// console.log(y);
+// for (let el of y) {
+//   console.log(el);
+// }
+
+//
+// console.log(1_234_232_233);
+// console.log(2 ** 1023);
+// console.log(2 ** 69);
+// console.log(Number.MAX_SAFE_INTEGER);
+// console.log(Number.MIN_SAFE_INTEGER);
+
+// let x = 2n;
+// let y = 10;
+// let z = x + BigInt(y);
+// console.log(z);
+
+// //
+// let hozir = new Date();
+// console.log(hozir);
+// let kecha = new Date(2022, 2, 14, 15, 30, 24);
+// console.log(kecha);
+// let kechadanOldin = new Date("March,13,2022");
+// console.log(kechadanOldin);
+// console.log(new Date(1998, 0, 6));
+// console.log(new Date(10 * 24 * 60 * 60 * 1000));
+// console.log(new Date(1_100_000_000_000_0));
+// console.log(new Date().getDate());
+// console.log(new Date().toISOString());
+// let a = new Date().getTime();
+// console.log(a);
+// let b = new Date((5 * 365 + 1) * 24 * 60 * 60 * 1000);
+// let besh = new Date(a + b);
+// console.log(besh);
+
+let hozir = new Date();
+hozir.setFullYear(2040);
+console.log(hozir);
+
+console.log(Date.now());
+console.log(new Date());
