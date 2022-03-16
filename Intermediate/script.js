@@ -958,3 +958,17 @@ console.log(hozir);
 
 console.log(Date.now());
 console.log(new Date());
+
+// shifr va deshifr
+let str = "salom hello";
+function shifr(s) {
+  let arr = s.split("");
+  for (i = 0; i < arr.length; i++) {
+    return arr[i.charCodeAt()];
+  }
+}
+
+console.log(shifr(str));
+// for (let el of str) {
+//   console.log(el);
+// }
