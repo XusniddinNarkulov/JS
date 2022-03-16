@@ -12,3 +12,7 @@ body {
 .box h1 {
   padding: 20%;
 }
+form {
+  display: grid;
+  gap: 15%;
+}

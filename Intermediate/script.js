@@ -952,23 +952,133 @@
 // let besh = new Date(a + b);
 // console.log(besh);
 
-let hozir = new Date();
-hozir.setFullYear(2040);
-console.log(hozir);
+// let hozir = new Date();
+// hozir.setFullYear(2040);
+// console.log(hozir);
 
-console.log(Date.now());
-console.log(new Date());
+// console.log(Date.now());
+// console.log(new Date());
 
 // shifr va deshifr
-let str = "salom hello";
-function shifr(s) {
-  let arr = s.split("");
-  for (i = 0; i < arr.length; i++) {
-    return arr[i.charCodeAt()];
-  }
-}
+// let str = prompt("kodingizni kiriting");
+// let str = "Hello";
 
-console.log(shifr(str));
-// for (let el of str) {
-//   console.log(el);
+// let a = [];
+// function shifr(s) {
+//   let arr = s.split("");
+//   for (let i = 0; i < s.length; i++) {
+//     // console.log(arr[i].charCodeAt().toString(2));
+//     a.push(arr[i].charCodeAt().toString(2));
+//   }
+//   a.join("");
+//   // out = a.join("");
+//   console.log(a.join(""));
 // }
+// shifr(str);
+
+// let bin = 1110011110000111011001101111110110110000011010001100101110110011011001101111;
+// console.log(bin.toString());
+
+// function unshifr(u) {
+//   for (let el of u) {
+//     let char = el.toString();
+//     console.log(char);
+//   }
+// }
+
+// console.log(a[0]);
+
+// ````````````let onlikarr = [];
+// for (let k = 0; k < a.length; k++) {
+//   let onlik = 0;
+//   let arr1 = a[k].reverse();
+//   for (let i = 0; i <= arr1.length; i++) {
+//     if (arr1[i] == 1) {
+//       onlik = onlik + 2 ** i;
+//       harf = String.fromCharCode(onlik);
+//     }
+//   }
+//   onlikarr.push(harf);
+// }
+// console.log(onlikarr);````````````
+
+//
+// console.log(new Date(2222, 1, 11).getTime());
+// console.log(new Date(7955866800000));
+// let data = new Date(7955866800000);
+// let iso = data.toISOString();
+// console.log(iso);
+
+// let now = new Date();
+// let options = {
+//   day: "numeric",
+//   month: "long",
+//   weekday: "long",
+//   year: "numeric",
+//   hour: "numeric",
+//   minute: "numeric",
+//   second: "numeric",
+// };
+// let uzb = new Intl.DateTimeFormat(navigator.language, options).format(now);
+// console.log(uzb); //2022-3-16
+
+// let davlat = navigator.language;
+// console.log(davlat);
+
+//intl numbers
+let num = 12312321321.9898;
+let settings = {
+  style: "decimal",
+  style: "currency",
+  currency: "USD",
+  style: "percent",
+  style: "unit",
+  unit: "celsius",
+  useGrouping: false, //
+};
+let convert = new Intl.NumberFormat("ru-RU", settings).format(num);
+console.log(convert);
+
+//timer
+// let a = Number(prompt(`1-raqam`));
+// let b = Number(prompt(`2-raqam`));
+// let timeOut = setTimeout(
+//   function (a, b) {
+//     let c = a + b;
+//     if (c > 18) {
+//       clearTimeout(timeOut);
+//     }
+//     console.log("salom");
+//     console.log(c);
+//   },
+//   3000, //3000 millisekund
+//   a,
+//   b
+//   // 2, //a
+//   // 5 //b
+// ); //3 sekunddan keyin salom chiqadi
+
+// let age = Number(prompt(`yosh:`));
+// let t = setTimeout(
+//   function (d) {
+//     console.log("hello");
+//   },
+//   2000,
+//   age
+// );
+// if (age < 20) {
+//   clearTimeout(t);
+// }
+
+let i = 59;
+let min = 0;
+let inter = setInterval(function () {
+  console.log(min, i--);
+  if (min == 0 && i == 0) {
+    clearInterval(inter);
+  }
+  if (i == 0) {
+    i = 59;
+    min = min - 1;
+  }
+}, 100);
