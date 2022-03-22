@@ -75,9 +75,9 @@ document.addEventListener('keydown', function (e) {
 
 // scrolling
 
-let btnScrollTo = document.querySelector('.btn--scroll-to');
-let section1 = document.querySelector('#section--1');
-let footer = document.querySelector('footer');
+// let btnScrollTo = document.querySelector('.btn--scroll-to');
+// let section1 = document.querySelector('#section--1');
+// let footer = document.querySelector('footer');
 
 // console.log(section1.getBoundingClientRect());
 // console.log(window.pageXOffset, window.pageYOffset);
@@ -112,13 +112,13 @@ let footer = document.querySelector('footer');
 //
 // footer.onmouseleave = () => (footer.style.background = 'red');
 
-let r = function () {
-  return Math.round(Math.random() * 255);
-};
+// let r = function () {
+//   return Math.round(Math.random() * 255);
+// };
 
-let nav = document.querySelector('.nav');
-let links = document.querySelector('.nav__links');
-let link = document.querySelectorAll('.nav__link');
+// let nav = document.querySelector('.nav');
+// let links = document.querySelector('.nav__links');
+// let link = document.querySelectorAll('.nav__link');
 
 // nav.onclick = e => (
 //   // console.log(e),
@@ -150,15 +150,38 @@ let link = document.querySelectorAll('.nav__link');
 //   });
 // });
 
-links.addEventListener('click', function (e) {
-  e.preventDefault();
-  console.log(e);
-  if (e.target.classList.contains('nav__link')) {
-    const id = e.target.getAttribute('href');
-    console.log(id);
-    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
-  }
-});
+// links.addEventListener('click', function (e) {
+//   e.preventDefault();
+//   console.log(e);
+//   if (e.target.classList.contains('nav__link')) {
+//     const id = e.target.getAttribute('href');
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   }
+// });
 
-console.log(links.parentElement.children);
-console.log(link);
+// console.log(links.parentElement.children);
+// console.log(link);
+
+//
+//
+//
+//Constructor functions and new Operator
+const Neo = function (name, age) {
+  this.name = name;
+  this.age = age;
+};
+const neo = new Neo('anderson', 24);
+console.log(neo);
+const sardor = new Neo('sardor', 20);
+Neo.prototype.birth = function (year) {
+  console.log(2022 - year);
+};
+neo.birth(1996);
+console.log(neo);
+console.log(sardor);
+console.log(neo.hasOwnProperty('birth'));
+console.log(neo.__proto__);
+console.log(sardor.__proto__);
+console.log(Neo.prototype.isPrototypeOf(neo));
+console.log(Neo.prototype);
