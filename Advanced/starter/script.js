@@ -166,22 +166,3 @@ document.addEventListener('keydown', function (e) {
 //
 //
 //
-//Constructor functions and new Operator
-const Neo = function (name, age) {
-  this.name = name;
-  this.age = age;
-};
-const neo = new Neo('anderson', 24);
-console.log(neo);
-const sardor = new Neo('sardor', 20);
-Neo.prototype.birth = function (year) {
-  console.log(2022 - year);
-};
-neo.birth(1996);
-console.log(neo);
-console.log(sardor);
-console.log(neo.hasOwnProperty('birth'));
-console.log(neo.__proto__);
-console.log(sardor.__proto__);
-console.log(Neo.prototype.isPrototypeOf(neo));
-console.log(Neo.prototype);
