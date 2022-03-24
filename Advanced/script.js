@@ -134,3 +134,7 @@ iphone.name = "X";
 iphone.price = 1200;
 iphone.year = 2020;
 console.log(iphone);
+
+
+
+
