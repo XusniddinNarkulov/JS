@@ -223,66 +223,85 @@
 
 //Inheritance in Object.create()
 
-const Person = {
-  hisobla() {
-    return 2022 - this.yosh;
-  },
-  qush(ism, yosh) {
-    this.ism = ism;
-    this.yosh = yosh;
-  },
-};
+// const Person = {
+//   hisobla() {
+//     return 2022 - this.yosh;
+//   },
+//   qush(ism, yosh) {
+//     this.ism = ism;
+//     this.yosh = yosh;
+//   },
+// };
 
-const Student = Object.create(Person);
-// Student.qush("Umid", 23);
-Student.qush = function (ism, yosh, fak) {
-  Person.qush.call(this, ism, yosh);
-  this.fak = fak;
-};
+// const Student = Object.create(Person);
+// // Student.qush("Umid", 23);
+// Student.qush = function (ism, yosh, fak) {
+//   Person.qush.call(this, ism, yosh);
+//   this.fak = fak;
+// };
 
-Student.tanish = function () {
-  console.log(`I am ${this.ism}`);
-};
+// Student.tanish = function () {
+//   console.log(`I am ${this.ism}`);
+// };
 
-const jack = Object.create(Person);
-const neo = Object.create(Student);
-neo.qush("Neo", 23, "AI");
-console.log(neo.hisobla()); //1999
-console.log(neo);
-jack.qush("Jack", 22);
-console.log(jack);
-console.log(jack.hisobla());
+// const jack = Object.create(Person);
+// const neo = Object.create(Student);
+// neo.qush("Neo", 23, "AI");
+// console.log(neo.hisobla()); //1999
+// console.log(neo);
+// jack.qush("Jack", 22);
+// console.log(jack);
+// console.log(jack.hisobla());
 
-//Encapsulation: Protected properties and methods
+// //Encapsulation: Protected properties and methods
 
-class University {
-  #nomi;
-  constructor(nomi, soni, pin) {
-    this.#nomi = nomi;
-    this.soni = soni;
-    this._pin = pin;
+// class University {
+//   #nomi;
+//   constructor(nomi, soni, pin) {
+//     this.#nomi = nomi;
+//     this.soni = soni;
+//     this._pin = pin;
+//   }
+//   nomiUzgar(val) {
+//     this.#nomi = val;
+//   }
+//   _parolUzgar(val) {
+//     this._pin = "1" + val + "1";
+//   }
+//   parol(val) {
+//     this._parolUzgar(val);
+//   }
+// }
+// const tatu = new University("TATU", 5000, 2222);
+// tatu.pin = 3333;
+// console.log(tatu);
+// tatu._parolUzgar(4444);
+// console.log(tatu);
+// tatu.parol("0000");
+// console.log(tatu);
+// console.log(tatu.nomi);
+// tatu.nomiUzgar("tuit");
+// console.log(tatu);
+// //Encapsulation: private properties and methods
+
+// const faculty = new University("dev", 1000, 7777);
+// console.log(faculty);
+
+//chaining methods
+
+class Car {
+  constructor(nomi) {
+    this.nomi = nomi;
   }
-  nomiUzgar(val) {
-    this.#nomi = val;
+  nomniOl() {
+    console.log(this.name);
+    return this;
   }
-  _parolUzgar(val) {
-    this._pin = "1" + val + "1";
-  }
-  parol(val) {
-    this._parolUzgar(val);
+  nomniUzgartir(val) {
+    this.name = val;
+    return this;
   }
 }
-const tatu = new University("TATU", 5000, 2222);
-tatu.pin = 3333;
-console.log(tatu);
-tatu._parolUzgar(4444);
-console.log(tatu);
-tatu.parol("0000");
-console.log(tatu);
-console.log(tatu.nomi);
-tatu.nomiUzgar("tuit");
-console.log(tatu);
-//Encapsulation: private properties and methods
 
-const faculty = new University("dev", 1000, 7777);
-console.log(faculty);
+let nexia = new Car("BMW");
+console.log(nexia.nomniUzgartir("Malibu").nomniOl());
