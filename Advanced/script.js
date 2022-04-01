@@ -289,19 +289,35 @@
 
 //chaining methods
 
-class Car {
-  constructor(nomi) {
-    this.nomi = nomi;
-  }
-  nomniOl() {
-    console.log(this.name);
-    return this;
-  }
-  nomniUzgartir(val) {
-    this.name = val;
-    return this;
-  }
-}
+// class Car {
+//   constructor(nomi) {
+//     this.nomi = nomi;
+//   }
+//   nomniOl() {
+//     console.log(this.name);
+//     return this;
+//   }
+//   nomniUzgartir(val) {
+//     this.name = val;
+//     return this;
+//   }
+// }
 
-let nexia = new Car("BMW");
-console.log(nexia.nomniUzgartir("Malibu").nomniOl());
+// let nexia = new Car("BMW");
+// console.log(nexia.nomniUzgartir("Malibu").nomniOl());
+
+//ASYNCHRONOUS JS
+setInterval((e) => {
+  // console.log(a);
+  // console.log(e);
+  let b = 3;
+  // console.log(b);
+}, 1000);
+let a = 5;
+
+let b;
+navigator.geolocation.getCurrentPosition(function (e) {
+  b = e;
+  console.log(b);
+});
+console.log(b);
